@@ -1,0 +1,17 @@
+# SISTEMA DE GESTION Y FACTURACION - CARWASH
+def mostrar_menu_servicios():
+    print("\n\n")
+    print("===== CARWASH: SERVICIOS Y TARIFAS =====")
+    print('1. Lavado Simple')
+    print('2. Lavado de Salon')
+    print('3. Encerado')
+    print('4. Lavado de Motor')
+    print('\nTARIFAS (S/)')
+    print('==========================================')
+    print("Servicio           Auto   Camioneta   Moto")
+    print('==========================================')
+    print("1. Lavado simple     15       20        10")
+    print("2. Lavado de Salon   25       30        15")
+    print("3. Encerado          35       45        25")
+    print("4. Lavado de Motor   40       50        30")
+    print('==========================================')
