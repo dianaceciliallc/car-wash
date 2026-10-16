@@ -116,3 +116,48 @@ CANTIDAD DE SERVICIOS ATENDIDOS')
     print('Total general de vehiculos atendidos:', total_vehiculos)
     print('================================================')
 
+
+
+    def main():
+    print('==================================================')
+    print('   BIENVENIDO AL SISTEMA DE GESTIÓN - CARWASH     ')
+    print('==================================================')
+    
+    # Acumuladores globales del día
+    total_recaudado = 0
+    total_comisiones = 0
+    contador_servicios = {
+        'Lavado Simple': 0,
+        'Lavado de Salon': 0,
+        'Encerado': 0,
+        'Lavado de Motor': 0
+    }
+
+    while True:
+        print('
+--- MENÚ PRINCIPAL: ¿QUÉ DESEA HACER HOY? ---
+')
+        print('1. Registrar nuevos vehículos / atenciones')
+        print('2. Ver reporte de caja actual')
+        print('3. Salir del sistema')
+        
+        opcion = input('Seleccione una opción (1-3): ')
+
+        if opcion == '1':
+            total_recaudado, total_comisiones, contador_servicios = procesar_atenciones(
+                total_recaudado, total_comisiones, contador_servicios
+            )
+        elif opcion == '2':
+            mostrar_reporte(total_recaudado, total_comisiones, contador_servicios)
+        elif opcion == '3':
+            print('
+¡Gracias por usar el sistema de Carwash! Hasta luego.')
+            break
+        else:
+            print('
+[Error] Opción no válida. Por favor, elija un número entre 1 y 3.')
+
+
+if __name__ == '__main__':
+    main()
+    
