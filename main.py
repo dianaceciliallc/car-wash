@@ -93,3 +93,26 @@ TIPO DE VEHICULO')
     print('
 ¡Atenciones registradas con éxito!')
     return total_recaudado, total_comisiones, contador_servicios
+
+    
+def mostrar_reporte(total_recaudado, total_comisiones, contador_servicios):
+    ingreso_neto = total_recaudado - total_comisiones
+
+    print('
+========== CIERRE DE CAJA (ACUMULADO) ==========')
+    print('Ingresos totales: S/', format(total_recaudado, '.2f'))
+    print('Total de comisiones: S/', format(total_comisiones, '.2f'))
+    print('Ingreso neto del local: S/', format(ingreso_neto, '.2f'))
+
+    print('
+CANTIDAD DE SERVICIOS ATENDIDOS')
+    total_vehiculos = 0
+    for servicio in contador_servicios:
+        cantidad = contador_servicios[servicio]
+        print(f'- {servicio}: {cantidad}')
+        total_vehiculos = total_vehiculos + cantidad
+
+    print('------------------------------------------------')
+    print('Total general de vehiculos atendidos:', total_vehiculos)
+    print('================================================')
+
